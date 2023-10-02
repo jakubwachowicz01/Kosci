@@ -6,8 +6,11 @@ public class Player {
     private int permScore;
     private int tempScore;
     Random random;
+    private String name;
 
-    public Player() {
+
+    public Player(String name) {
+        this.name = name;
         permScore = 0; // domyślnie 0
         tempScore = 0;
         random = new Random();
@@ -36,7 +39,15 @@ public class Player {
         tempScore = 0;
     }
 
+    public int getTempScore(){
+        return tempScore;
+    }
+
     public void printResults(){
         System.out.println("Wynik tymczasowy: " + tempScore + "\nWynik stały: " + permScore);
+    }
+
+    public String getName(){
+        return name;
     }
 }
